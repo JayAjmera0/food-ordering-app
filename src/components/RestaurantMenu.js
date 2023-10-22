@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
+import { useCart } from './CartContext';
 
 const RestaurantMenu = () => {
-  const { id } = useParams(); // Get restaurant ID from the URL params
+  const { id } = useParams();
   const [restaurant, setRestaurant] = useState(null);
+  const { cart, dispatch } = useCart();
 
-  // Example restaurant data (replace this with your actual restaurant data)
   const restaurantData = [
     { id: 1, name: 'Restaurant 1', rating: 4.5, imageUrl: 'restaurant-image-url-1', menu: [
       { category: 'Appetizers', items: [
@@ -26,7 +27,13 @@ const RestaurantMenu = () => {
     // Find the restaurant by ID from the data
     const selectedRestaurant = restaurantData.find(rest => rest.id === parseInt(id, 10));
     setRestaurant(selectedRestaurant);
-  }, [id]);
+  }, [id, restaurantData]);
+
+  const addToCart = (item) => {
+    const newItem = { ...item, quantity: 1 };
+    dispatch({ type: 'ADD_TO_CART', payload: newItem });
+    alert(`${item.name} added to cart!`);
+  };
 
   if (!restaurant) {
     return <div>Loading...</div>;
@@ -55,7 +62,7 @@ const RestaurantMenu = () => {
                   <p>{item.description}</p>
                   <p>Rating: {item.rating}</p>
                   <p>Price: ${item.price.toFixed(2)}</p>
-                  <button>Add to Cart</button>
+                  <button onClick={() => addToCart(item)}>Add to Cart</button>
                 </div>
               ))}
             </div>

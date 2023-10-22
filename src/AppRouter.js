@@ -5,7 +5,7 @@ import UserProfile from './components/UserProfile';
 import PastOrders from './components/PastOrders';
 import Addresses from './components/Addresses';
 import RestaurantMenu from './components/RestaurantMenu';
-// import Cart from './components/Cart';
+import Cart from './components/Cart';
 // import AddressSelection from './components/AddressSelection';
 // import PaymentOptions from './components/PaymentOptions';
 // import AboutUs from './components/AboutUs';
@@ -21,8 +21,9 @@ const AppRouter = () => {
         <Route path="/addresses" element={<Addresses />} />
         
         <Route path="/restaurant-menu/:id" element={<RestaurantMenu />} />
-         {/*
+        
         <Route path="/cart" element={<Cart />} />
+         {/*
         <Route path="/address-selection" element={<AddressSelection />} />
         <Route path="/payment-options" element={<PaymentOptions />} />
         <Route path="/about-us" element={<AboutUs />} /> */}
