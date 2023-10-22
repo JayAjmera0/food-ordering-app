@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 const CartContext = createContext();
 
@@ -27,13 +27,29 @@ const cartReducer = (state, action) => {
     case 'REMOVE_FROM_CART':
       return state.filter(item => item.id !== action.payload.id);
 
+    case 'INCREASE_QUANTITY':
+      return state.map(item =>
+        item.id === action.payload.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+
+    case 'DECREASE_QUANTITY':
+      return state.map(item =>
+        item.id === action.payload.id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
+      );
+
     default:
       return state;
   }
 };
 
 export const CartProvider = ({ children }) => {
-  const [cart, dispatch] = useReducer(cartReducer, []);
+  const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+  const [cart, dispatch] = useReducer(cartReducer, storedCart);
+
+  useEffect(() => {
+    // Update local storage whenever cart changes
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <CartContext.Provider value={{ cart, dispatch }}>
