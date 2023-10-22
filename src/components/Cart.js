@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from './CartContext';
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const { cart, dispatch } = useCart();
@@ -15,6 +16,10 @@ const Cart = () => {
 
   const decreaseQuantity = (itemId) => {
     dispatch({ type: 'DECREASE_QUANTITY', payload: { id: itemId } });
+  };
+
+  const calculateSubtotal = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
 
   return (
@@ -40,6 +45,12 @@ const Cart = () => {
               </div>
             </div>
           ))}
+          <div className="subtotal">
+            <h2>Subtotal: ${calculateSubtotal()}</h2>
+            <Link to="/checkout">
+              <button>Place Order</button>
+            </Link>
+          </div>
         </div>
       )}
     </div>
