@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-// import Login from './components/Login';
-// import Signup from './components/Signup';
 // import UserProfile from './components/UserProfile';
 // import PastOrders from './components/PastOrders';
 // import Addresses from './components/Addresses';
@@ -18,8 +16,7 @@ const AppRouter = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/*
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path="/past-orders" element={<PastOrders />} />
         <Route path="/addresses" element={<Addresses />} />
