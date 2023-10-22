@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Navbar from './Navbar.js';
 
 const Home = () => {
@@ -55,14 +56,16 @@ const Home = () => {
       <section className="features">
         <h2>Featured Restaurants</h2>
         <div className="featured-restaurants">
-          {/* Dynamically generate restaurant cards */}
+          {/* Dynamically generate restaurant cards with Link */}
           {restaurants.map(restaurant => (
-            <div className="restaurant-card" key={restaurant.id}>
-              <img src={restaurant.imageUrl} alt="Restaurant" />
-              <h3>{restaurant.name}</h3>
-              <p>Cuisine: {restaurant.cuisine}</p>
-              <p>Rating: {restaurant.rating}</p>
-            </div>
+            <Link to={`/restaurant-menu/${restaurant.id}`} key={restaurant.id}>
+              <div className="restaurant-card">
+                <img src={restaurant.imageUrl} alt="Restaurant" />
+                <h3>{restaurant.name}</h3>
+                <p>Cuisine: {restaurant.cuisine}</p>
+                <p>Rating: {restaurant.rating}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </section>

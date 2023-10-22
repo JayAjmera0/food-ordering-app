@@ -1,0 +1,69 @@
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Navbar from './Navbar';
+
+const RestaurantMenu = () => {
+  const { id } = useParams(); // Get restaurant ID from the URL params
+  const [restaurant, setRestaurant] = useState(null);
+
+  // Example restaurant data (replace this with your actual restaurant data)
+  const restaurantData = [
+    { id: 1, name: 'Restaurant 1', rating: 4.5, imageUrl: 'restaurant-image-url-1', menu: [
+      { category: 'Appetizers', items: [
+        { id: 1, name: 'Appetizer 1', description: 'Description of Appetizer 1', price: 8.99, imageUrl: 'item-image-url-1', rating: 4.3 },
+        // Add more appetizer items as needed
+      ]},
+      { category: 'Main Courses', items: [
+        { id: 2, name: 'Main Course 1', description: 'Description of Main Course 1', price: 15.99, imageUrl: 'item-image-url-2', rating: 4.6 },
+        // Add more main course items as needed
+      ]},
+      // Add more categories as needed
+    ]}
+    // Add more restaurants as needed
+  ];
+
+  useEffect(() => {
+    // Find the restaurant by ID from the data
+    const selectedRestaurant = restaurantData.find(rest => rest.id === parseInt(id, 10));
+    setRestaurant(selectedRestaurant);
+  }, [id]);
+
+  if (!restaurant) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className="restaurant-menu">
+      <Navbar />
+      <section className="blog-post-header">
+        <h1>{restaurant.name}</h1>
+        <img src={restaurant.imageUrl} alt={restaurant.name} />
+        <p>Rating: {restaurant.rating}</p>
+      </section>
+
+      <section className="blog-post-body">
+        <h2>Menu</h2>
+        {/* Display menu categories and items */}
+        {restaurant.menu.map(category => (
+          <div className="menu-category" key={category.category}>
+            <h3>{category.category}</h3>
+            <div className="menu-items">
+              {category.items.map(item => (
+                <div className="menu-item" key={item.id}>
+                  <img src={item.imageUrl} alt={item.name} />
+                  <h4>{item.name}</h4>
+                  <p>{item.description}</p>
+                  <p>Rating: {item.rating}</p>
+                  <p>Price: ${item.price.toFixed(2)}</p>
+                  <button>Add to Cart</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+};
+
+export default RestaurantMenu;

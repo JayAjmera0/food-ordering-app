@@ -37,6 +37,9 @@ const UserProfile = () => {
         <Link to="/past-orders">
           <button>View Past Orders</button>
         </Link>
+        <Link to="/addresses">
+          <button>Addresses</button>
+        </Link>
       </section>
       {/* Add more sections and user-related information as needed */}
     </div>
