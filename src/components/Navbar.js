@@ -11,6 +11,7 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/cart">Cart</Link> </li>
         <li><Link to="/user-profile"><img src="profile-icon.png" alt="Profile" /></Link></li>
+        <li><Link to="/about-us">About Us</Link></li>
         {/* Add more navigation links as needed */}
       </ul>
     </nav>
