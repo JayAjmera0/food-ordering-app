@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { useCart } from './CartContext';
+import './RestaurantMenu.css';
 
 const RestaurantMenu = () => {
   const { id } = useParams();
@@ -9,7 +10,7 @@ const RestaurantMenu = () => {
   const { cart, dispatch } = useCart();
 
   const restaurantData = [
-    { id: 1, name: 'Bella Italia', rating: 4.5, imageUrl: 'restaurant-image-url-1', menu: [
+    { id: 1, name: 'Bella Italia', rating: 4.5, imageUrl:"/pasta.jpg", menu: [
       { category: 'Appetizers', items: [
         { id: 1, name: 'Appetizer 1', description: 'Description of Appetizer 1', price: 8.99, imageUrl: 'item-image-url-1', rating: 4.3 },
         // Add more appetizer items as needed
