@@ -9,11 +9,29 @@ const Home = () => {
 
   // Example data (replace this with your actual restaurant data)
   const restaurantData = [
-    { id: 1, name: 'Restaurant 1', cuisine: 'Italian', rating: 4.5, imageUrl: 'restaurant-image-url-1' },
-    { id: 2, name: 'Restaurant 2', cuisine: 'Mexican', rating: 4.2, imageUrl: 'restaurant-image-url-2' },
+    {
+      id: 1,
+      name: 'Bella Italia',
+      cuisine: 'Italian',
+      rating: 4.5,
+      imageUrl:"./pasta.jpg", // Add the image URL for Italian restaurant
+    },
+    {
+      id: 2,
+      name: 'Tortilla Street',
+      cuisine: 'Mexican',
+      rating: 4.2,
+      imageUrl: './tacos.jpg', // Add the image URL for Mexican restaurant
+    },
+    {
+      id: 3,
+      name: 'Indian Masala House',
+      cuisine: 'Indian',
+      rating: 4.2,
+      imageUrl: '/indian.jpg', // Add the image URL for Mexican restaurant
+    },
     // Add more restaurant entries as needed
   ];
-
   useEffect(() => {
     // Set restaurants when component mounts
     setRestaurants(restaurantData);
@@ -64,15 +82,15 @@ const Home = () => {
         <div className="featured-restaurants">
           {/* Dynamically generate restaurant cards with Link */}
           {restaurants.map(restaurant => (
-            <Link to={`/restaurant-menu/${restaurant.id}`} key={restaurant.id}>
-              <div className="restaurant-card">
-                <img src={restaurant.imageUrl} alt="Restaurant" />
-                <h3>{restaurant.name}</h3>
-                <p>Cuisine: {restaurant.cuisine}</p>
-                <p>Rating: {restaurant.rating}</p>
-              </div>
-            </Link>
-          ))}
+  <Link to={`/restaurant-menu/${restaurant.id}`} key={restaurant.id}>
+    <div className="restaurant-card">
+      <img src={restaurant.imageUrl} alt="Restaurant" />
+      <h3>{restaurant.name}</h3>
+      <p>Cuisine: {restaurant.cuisine}</p>
+      <p>Rating: {restaurant.rating}</p>
+    </div>
+  </Link>
+))}
         </div>
       </section>
     </div>
