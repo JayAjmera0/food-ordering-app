@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, Row } from 'react-bootstrap';
+import { Card, Nav, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './AboutUs.css'; // Import the CSS file
+import Navbar from './Navbar';
 
 const creatorsData = [
     {
@@ -33,6 +34,7 @@ const creatorsData = [
 const CreatorsPage = () => {
   return (
     <div className="container mt-5">
+      <Navbar />
       <h1>Meet the Creators</h1>
       <Row className="mt-4">
         {creatorsData.map(creator => (
