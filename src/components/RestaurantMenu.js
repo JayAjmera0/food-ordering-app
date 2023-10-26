@@ -12,12 +12,12 @@ const RestaurantMenu = () => {
   const restaurantData = [
     { id: 1, name: 'Bella Italia', rating: 4.5, menu: [
       { category: 'Appetizers', items: [
-        { id: 1, name: 'Appetizer 1', description: 'Description of Appetizer 1', price: 8.99, imageUrl: '/ita1.jpg', rating: 4.3 },
+        { id: 1, name: 'Pesto', description: 'Description of Appetizer 1', price: 8.99, imageUrl: '/ita1.jpg', rating: 4.3 },
         // Add more appetizer items as needed
       ]},
       { category: 'Main Courses', items: [
-        { id: 2, name: 'Main Course 1', description: 'Description of Main Course 1', price: 15.99, imageUrl: '/ita2.jpg', rating: 4.6 },
-        { id: 3, name: 'Main Course 1', description: 'Description of Main Course 1', price: 15.99, imageUrl: '/ita3.jpg', rating: 4.6 },
+        { id: 2, name: 'Pasta Penne', description: 'Description of Main Course 1', price: 15.99, imageUrl: '/ita2.jpg', rating: 4.6 },
+        { id: 3, name: 'Spaghetti', description: 'Description of Main Course 1', price: 15.99, imageUrl: '/ita3.jpg', rating: 4.6 },
 
         // Add more main course items as needed
       ]},
