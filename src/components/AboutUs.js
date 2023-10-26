@@ -1,29 +1,30 @@
 import React from 'react';
 import { Card, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './AboutUs.css'; // Import the CSS file
 
 const creatorsData = [
     {
       id: 1,
-      name: 'Creator 1',
-      description: 'Description of Creator 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      name: 'Kruttika Abhyankar',
+      description: 'desc',
       image: 'path_to_image_creator_1.jpg',
     },
     {
       id: 2,
-      name: 'Creator 2',
+      name: 'Jay Ajmera',
       description: 'Description of Creator 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       image: 'path_to_image_creator_2.jpg',
     },
     {
       id: 3,
-      name: 'Creator 3',
-      description: 'Description of Creator 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      name: 'Chirag Chaudhary',
+      description: 'Description of Creator 3. Lrem  dolor sit amet, consectetur adipiscing elit.',
       image: 'path_to_image_creator_3.jpg',
     },
     {
       id: 4,
-      name: 'Creator 4',
+      name: 'Ninad Khasale',
       description: 'Description of Creator 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       image: 'path_to_image_creator_4.jpg',
     },

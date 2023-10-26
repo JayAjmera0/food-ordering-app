@@ -80,7 +80,8 @@ body {
 }
 
 .veg-option {
-  margin-left: 20px;
+  margin: 20px;
+  padding-right:50px;
 }
 
 /* Navbar styles */

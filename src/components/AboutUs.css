@@ -1,0 +1,46 @@
+/* creators-page.css */
+
+.container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Optional: Add margin to the entire row */
+.row {
+  margin: 0 -15px;
+}
+
+/* Optional: Adjust column margins */
+.col-md-3 {
+  padding: 0 15px;
+}

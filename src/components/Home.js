@@ -51,21 +51,22 @@ const Home = () => {
             {/* Include filter options here */}
             {/* For example: */}
             {/* Veg/Non-Veg filter */}
-            <label>
-              <input type="checkbox" /> Veg Only
+            <label style={{ display: 'inline-block', marginRight: '10px' }}>
+            <input type="checkbox" /> Veg Only
             </label>
+
             {/* Cuisine filter */}
-            <select>
-              <option value="">Select Cuisine</option>
-              {/* Add cuisine options */}
+            <select style={{ padding: '5px', borderRadius: '5px', border: '1px solid #ccc',marginRight: '10px' }}>
+            <option value="">Select Cuisine</option>
+            {/* Add cuisine options */}
             </select>
             {/* Ratings filter */}
-            <select>
+            <select style={{ padding: '5px', borderRadius: '5px', border: '1px solid #ccc',marginRight: '10px' }}>
               <option value="">Select Ratings</option>
               {/* Add ratings options */}
             </select>
             {/* Price filter */}
-            <select>
+            <select style={{ padding: '5px', borderRadius: '5px', border: '1px solid #ccc',marginRight: '10px' }}>
               <option value="">Select Price Range</option>
               {/* Add price range options */}
             </select>
