@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Navbar from './Navbar.js';
+import myVideo from './/FOOD.mp4';
+
 
 const Home = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -19,6 +21,7 @@ const Home = () => {
 
   return (
     <div className="home">
+
       <Navbar />
       <section className="hero">
         {/* Hero Header Section */}
@@ -50,11 +53,14 @@ const Home = () => {
             </select>
           </div>
         </div>
+        <video autoPlay loop muted>
+        <source src={myVideo} type="video/mp4" />
+      </video>
       </section>
 
       {/* Feature Section */}
       <section className="features">
-        <h2>Featured Restaurants</h2>
+        
         <div className="featured-restaurants">
           {/* Dynamically generate restaurant cards with Link */}
           {restaurants.map(restaurant => (
