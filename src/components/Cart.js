@@ -37,11 +37,11 @@ const Cart = () => {
                 <h3>{item.name}</h3>
                 <div className="quantity-controls">
                 <p>Quantity: {item.quantity}</p>
-                  <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                  <button onClick={() => increaseQuantity(item.id)}>+</button>
+                  <button className="button1" onClick={() => decreaseQuantity(item.id)}>-</button>
+                  <button className="button1" onClick={() => increaseQuantity(item.id)}>+</button>
                 </div>
                 <p>Price: Rs {item.price.toFixed(2)}</p>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                <button className="button1" onClick={() => removeFromCart(item.id)}>Remove</button>
               </div>
             </div>
           ))}
