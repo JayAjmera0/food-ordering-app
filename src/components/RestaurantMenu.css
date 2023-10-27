@@ -43,10 +43,8 @@
 
 .menu-item {
   width: 20%;
-  margin-bottom: 20px;
+  margin: 10px auto;
   margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
   background-color: #fff; /* White background */
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
