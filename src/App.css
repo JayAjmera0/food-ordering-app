@@ -163,14 +163,13 @@ h1 {
   align-items: center;
 }
 
-button1{
+.button1{
   background-color: black;
   color: #fff;
-  border: none;
   padding: 5px 10px;
   cursor: pointer;
-  margin: 0 5px;
-  
+  margin: 0 3px;
+  margin-left: 5px;
 }
 
 button:hover {
