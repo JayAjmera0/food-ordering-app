@@ -38,7 +38,6 @@ const Cart = () => {
                 <div className="quantity-controls">
                 <p>Quantity: {item.quantity}</p>
                   <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                 
                   <button onClick={() => increaseQuantity(item.id)}>+</button>
                 </div>
                 <p>Price: Rs {item.price.toFixed(2)}</p>
