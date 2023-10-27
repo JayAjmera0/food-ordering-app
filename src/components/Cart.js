@@ -32,7 +32,6 @@ const Cart = () => {
         <div className="cart-items">
           {cart.map((item) => (
             <div className="cart-item" key={item.id}>
-              <img src={item.imageUrl} alt={item.name} />
               <div className="item-details">
                 <h3>{item.name}</h3>
                 <div className="quantity-controls">
@@ -40,13 +39,13 @@ const Cart = () => {
                   <p>Quantity: {item.quantity}</p>
                   <button onClick={() => increaseQuantity(item.id)}>+</button>
                 </div>
-                <p>Price: ${item.price.toFixed(2)}</p>
+                <p>Price: Rs {item.price.toFixed(2)}</p>
                 <button onClick={() => removeFromCart(item.id)}>Remove</button>
               </div>
             </div>
           ))}
           <div className="subtotal">
-            <h2>Subtotal: ${calculateSubtotal()}</h2>
+            <h2>Total: Rs {calculateSubtotal()}</h2>
             <Link to="/checkout">
               <button>Place Order</button>
             </Link>
