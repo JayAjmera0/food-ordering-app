@@ -2,6 +2,7 @@ import React from 'react';
 import { useCart } from './CartContext';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import './Cart.css'; 
 
 const Cart = () => {
   const { cart, dispatch } = useCart();
@@ -35,8 +36,9 @@ const Cart = () => {
               <div className="item-details">
                 <h3>{item.name}</h3>
                 <div className="quantity-controls">
+                <p>Quantity: {item.quantity}</p>
                   <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                  <p>Quantity: {item.quantity}</p>
+                 
                   <button onClick={() => increaseQuantity(item.id)}>+</button>
                 </div>
                 <p>Price: Rs {item.price.toFixed(2)}</p>
