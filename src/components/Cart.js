@@ -26,7 +26,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <Navbar />
-      <h1>Shopping Cart</h1>
+      <h1 className='heading'>Shopping Cart</h1>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (

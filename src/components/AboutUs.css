@@ -7,13 +7,21 @@
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  margin-top: 2rem;;
 }
 
 .card {
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: transform 0.2s;
+  width: calc(70% - 10px); /* Adjust the width as needed and subtract the desired gap value (10px in this example) */
+  margin: 10px; /* Add margin to create the gap between cards */
+  display: inline-block; /* Display the cards inline to align them horizontally */
+  text-align: center; /* Center align the content within each card */
+  padding: 15px; /* Add padding to create a margin between text and the border */
 }
+
+
 
 .card:hover {
   transform: scale(1.05);

@@ -8,25 +8,25 @@ const creatorsData = [
     {
       id: 1,
       name: 'Kruttika Abhyankar',
-      description: 'desc',
+      description: "Introducing Kruttika Abhyankar, a driven and ambitious individual with an unwavering passion for her work in the dynamic field of data science. Join Kruttika on her journey to harness the power of data and turn it into actionable insights. Together, we can explore the endless possibilities of data-driven innovation.",
       image: 'path_to_image_creator_1.jpg',
     },
     {
       id: 2,
       name: 'Jay Ajmera',
-      description: 'Description of Creator 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      description: "Meet Jay Ajmera, our passionate data science student and machine learning enthusiast. Leading the team at Analytika NMIMS, Jay spearheads data science projects aimed at solving real-world challenges. Join us on this data-driven journey, and let's collaborate to make a difference.",
       image: 'path_to_image_creator_2.jpg',
     },
     {
       id: 3,
       name: 'Chirag Chaudhary',
-      description: 'Description of Creator 3. Lrem  dolor sit amet, consectetur adipiscing elit.',
+      description: "Meet Chirag Chaudhary, a dedicated individual driven by his pursuit of excellence. With a diverse range of skills and a commitment to continuous growth, Chirag is poised to make a meaningful impact. Join us in celebrating Chirag's journey as he strives for excellence and embraces new challenges.",
       image: 'path_to_image_creator_3.jpg',
     },
     {
       id: 4,
       name: 'Ninad Khasale',
-      description: 'Description of Creator 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      description: "Meet Ninad Khasale, a dedicated and enthusiastic individual. With a thirst for knowledge and a commitment to excellence, Ninad is poised to make a lasting impact in his chosen field. Join us in following Ninad's journey as he pursues his aspirations and contributes to meaningful progress.",
       image: 'path_to_image_creator_4.jpg',
     },
   ];

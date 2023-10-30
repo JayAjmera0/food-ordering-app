@@ -86,8 +86,7 @@ const RestaurantMenu = () => {
       <Navbar />
       <section className="blog-post-header">
         <h1>{restaurant.name}</h1>
-        <img src={restaurant.imageUrl} alt={restaurant.name} />
-        <p>Rating: {restaurant.rating}</p>
+        <p>Restaurant Rating : {restaurant.rating}</p>
       </section>
 
       <section className="blog-post-body">
