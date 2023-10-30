@@ -9,7 +9,7 @@ const creatorsData = [
       id: 1,
       name: 'Kruttika Abhyankar',
       description: "Introducing Kruttika Abhyankar, a driven and ambitious individual with an unwavering passion for her work in the dynamic field of data science. Join Kruttika on her journey to harness the power of data and turn it into actionable insights. Together, we can explore the endless possibilities of data-driven innovation.",
-      image: 'path_to_image_creator_1.jpg',
+      image: 'kru_img.jpeg',
     },
     {
       id: 2,
@@ -37,17 +37,18 @@ const CreatorsPage = () => {
       <Navbar />
       <h1>Meet the Creators</h1>
       <Row className="mt-4">
-        {creatorsData.map(creator => (
-          <div key={creator.id} className="col-md-3 mb-4">
-            <Card>
-              <Card.Img variant="top" src={creator.image} alt={`Image of ${creator.name}`} />
-              <Card.Body>
-                <Card.Title>{creator.name}</Card.Title>
-                <Card.Text>{creator.description}</Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        ))}
+      {creatorsData.map(creator => (
+  <div key={creator.id} className="col-md-3 mb-4">
+    <Card>
+      <Card.Img variant="top" src={creator.image} alt={`Image of ${creator.name}`} className="card-img" />
+      <Card.Body>
+        <Card.Title>{creator.name}</Card.Title>
+        <Card.Text>{creator.description}</Card.Text>
+      </Card.Body>
+    </Card>
+  </div>
+))}
+
       </Row>
     </div>
   );
