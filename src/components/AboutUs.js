@@ -15,7 +15,7 @@ const creatorsData = [
       id: 2,
       name: 'Jay Ajmera',
       description: "Meet Jay Ajmera, our passionate data science student and machine learning enthusiast. Leading the team at Analytika NMIMS, Jay spearheads data science projects aimed at solving real-world challenges. Join us on this data-driven journey, and let's collaborate to make a difference.",
-      image: 'path_to_image_creator_2.jpg',
+      image: 'jay_img.jpeg',
     },
     {
       id: 3,

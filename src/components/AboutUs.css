@@ -60,6 +60,6 @@ h1 {
 
 /* Add these styles to your CSS file (AboutUs.css) */
 .card-img {
-  max-width: 70%; /* Set the maximum width to 100% of the card */
-  height: auto; /* Allow the image to maintain its aspect ratio */
+  max-width: 400px; /* Set the maximum width to 100% of the card */
+  height: 250px; /* Allow the image to maintain its aspect ratio */
 }
