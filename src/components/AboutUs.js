@@ -21,7 +21,7 @@ const creatorsData = [
       id: 3,
       name: 'Chirag Chaudhary',
       description: "Meet Chirag Chaudhary, a dedicated individual driven by his pursuit of excellence. With a diverse range of skills and a commitment to continuous growth, Chirag is poised to make a meaningful impact. Join us in celebrating Chirag's journey as he strives for excellence and embraces new challenges.",
-      image: 'path_to_image_creator_3.jpg',
+      image: 'chirag_img.jpeg',
     },
     {
       id: 4,
