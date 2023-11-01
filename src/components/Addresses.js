@@ -5,13 +5,13 @@ import axios from 'axios';
 
 const Addresses = () => {
   const [userAddresses, setUserAddresses] = useState([]);
-  const userId = 2; // Replace with the actual user ID
+  const userId = 2; 
 
   useEffect(() => {
     // Make an HTTP GET request to fetch user addresses data by user ID
     axios.get(`http://127.0.0.1:8000/api/addresses/?user=${userId}`)  // Filter by user ID
       .then(response => {
-        setUserAddresses(response.data);
+        setUserAddresses([response.data[0]]);
       })
       .catch(error => {
         console.error('Error fetching user addresses data:', error);
@@ -24,7 +24,7 @@ const Addresses = () => {
       <h1>Addresses</h1>
       <ul>
         {userAddresses.map(address => (
-          <li key={address.id}>
+          <li key={address.name}>
             <strong>Address Line 1:</strong> {address.address_line1} <br />
             <strong>Address Line 2:</strong> {address.address_line2} <br />
             <strong>City:</strong> {address.city} <br />
