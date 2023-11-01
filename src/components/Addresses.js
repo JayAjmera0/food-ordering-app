@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
+import './Addresses.css';
+import axios from 'axios';
 
 const Addresses = () => {
   const [userAddresses, setUserAddresses] = useState([]);
-
-  // Example user addresses data (replace this with your actual user addresses data)
-  const userAddressesData = [
-    { id: 1, addressLine1: '123 Main St', city: 'Cityville', postalCode: '12345' },
-    { id: 2, addressLine1: '456 Elm St', city: 'Towndale', postalCode: '67890' },
-    // Add more address entries as needed
-  ];
+  const userId = 2; // Replace with the actual user ID
 
   useEffect(() => {
-    // Set user addresses data when component mounts
-    setUserAddresses(userAddressesData);
-  }, []);
+    // Make an HTTP GET request to fetch user addresses data by user ID
+    axios.get(`http://127.0.0.1:8000/api/addresses/?user=${userId}`)  // Filter by user ID
+      .then(response => {
+        setUserAddresses(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching user addresses data:', error);
+      });
+  }, [userId]);
 
   return (
     <div className="addresses">
@@ -23,9 +25,12 @@ const Addresses = () => {
       <ul>
         {userAddresses.map(address => (
           <li key={address.id}>
-            <strong>Address Line 1:</strong> {address.addressLine1} <br />
+            <strong>Address Line 1:</strong> {address.address_line1} <br />
+            <strong>Address Line 2:</strong> {address.address_line2} <br />
             <strong>City:</strong> {address.city} <br />
-            <strong>Postal Code:</strong> {address.postalCode}
+            <strong>State:</strong> {address.state} <br />
+            <strong>Postal Code:</strong> {address.postal_code}<br />
+            <strong>Country:</strong> {address.country}
           </li>
         ))}
       </ul>

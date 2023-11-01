@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
+import axios from 'axios'; // Import Axios
 
 const PastOrders = () => {
   const [pastOrders, setPastOrders] = useState([]);
 
-  // Example past orders data (replace this with your actual past orders data)
-  const pastOrdersData = [
-    { id: 1, restaurant: 'Restaurant A', orderDate: '2023-10-20', total: 35.99 },
-    { id: 2, restaurant: 'Restaurant B', orderDate: '2023-10-18', total: 42.50 },
-    // Add more past order entries as needed
-  ];
-
   useEffect(() => {
-    // Set past orders data when component mounts
-    setPastOrders(pastOrdersData);
+    // Make an HTTP GET request to fetch past orders data
+    axios.get('http://127.0.0.1:8000/api/orders/') // Replace with your Django API URL
+      .then(response => {
+        setPastOrders(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching past orders data:', error);
+      });
   }, []);
 
   return (
@@ -23,9 +23,10 @@ const PastOrders = () => {
       <ul>
         {pastOrders.map(order => (
           <li key={order.id}>
-            <strong>Restaurant:</strong> {order.restaurant} <br />
-            <strong>Order Date:</strong> {order.orderDate} <br />
-            <strong>Total Price:</strong> ${order.total.toFixed(2)}
+            <strong>Restaurant:</strong> {order.restaurant_name} <br />
+            <strong>Order Date:</strong> {order.order_date} <br />
+            <strong>Status:</strong> {order.status} <br />
+            <strong>Total Price:</strong> ${order.total_price}
           </li>
         ))}
       </ul>
