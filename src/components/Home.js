@@ -2,42 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Navbar from './Navbar.js';
 import myVideo from './/FOOD.mp4';
+import axios from 'axios';
 
 
 const Home = () => {
+
   const [restaurants, setRestaurants] = useState([]);
 
-  // Example data (replace this with your actual restaurant data)
-  const restaurantData = [
-    {
-      id: 1,
-      name: 'Bella Italia',
-      cuisine: 'Italian',
-      rating: 4.5,
-      imageUrl:"./pasta.jpg", // Add the image URL for Italian restaurant
-    },
-    {
-      id: 2,
-      name: 'Tortilla Street',
-      cuisine: 'Mexican',
-      rating: 4.2,
-      imageUrl: './tacos.jpg', // Add the image URL for Mexican restaurant
-    },
-    {
-      id: 3,
-      name: 'Indian Masala House',
-      cuisine: 'Indian',
-      rating: 4.2,
-      imageUrl: '/indian.jpg', // Add the image URL for Mexican restaurant
-    },
-    {id:4, name:'Sushi Haven', rating:4.2, imageUrl:'sushi.jpg', cuisine:'Japanese'},
-    {id:5, name:'Burger Junction', rating:3.8, imageUrl:'burger.jpg', cuisine:'American'},
-    {id:6, name:'Chai Chai Cafe', rating:4.0, imageUrl:'chai.png', cuisine:'Indian'},
-  ];
   useEffect(() => {
-    // Set restaurants when component mounts
-    setRestaurants(restaurantData);
-  }, []);
+    // Make an HTTP GET request to fetch restaurant data
+    axios.get('http://127.0.0.1:8000/api/restaurants/')
+      .then(response => {
+        // Set the retrieved data to the state
+        setRestaurants(response.data);
+        console.log(response.data);
+        console.log(restaurants);
+      })
+      .catch(error => {
+        console.error('Error fetching restaurant data:', error);
+  });
+},[]);
 
   return (
     <div className="home">
