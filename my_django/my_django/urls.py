@@ -1,13 +1,7 @@
-# my_project/urls.py
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from my_app.views import ItemViewSet
-
-router = DefaultRouter()
-router.register(r'items', ItemViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path('admin/', admin.site.urls),  # This line should be present for accessing the admin site
+    path('api/', include('my_app.urls')),  # Include the app's URLs
 ]

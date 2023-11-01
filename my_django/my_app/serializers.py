@@ -1,8 +1,32 @@
 # my_app/serializers.py
 from rest_framework import serializers
-from .models import Item
+from .models import User, UserAddress, UserPastOrder, Restaurant, Category, RestaurantMenu
 
-class ItemSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Item
+        model = User
+        fields = '__all__'
+
+class UserAddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserAddress
+        fields = '__all__'
+
+class UserPastOrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserPastOrder
+        fields = '__all__'
+class RestaurantSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Restaurant
+        fields = '__all__'
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+class RestaurantMenuSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RestaurantMenu
         fields = '__all__'
