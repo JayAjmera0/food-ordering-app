@@ -7,12 +7,20 @@
 }
 
 .user-details {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 300px;
+  margin: 20px;
+  background-color: #fff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  display: inline-block;
   text-align: center;
+<<<<<<< HEAD
   padding: 10px; /* Add padding for spacing inside the container */
+=======
+  padding: 10px; 
+  width: 400px;
+>>>>>>> dbcd11efd3c2c01f6bc967df7ea07adee374eb47
 }
 
 h1 {

@@ -34,12 +34,6 @@ const Home = () => {
           {/* Filter options for veg/non-veg, cuisine, ratings, and price */}
           {/* ... (your filter options here) */}
           <div className="filters">
-            {/* Include filter options here */}
-            {/* For example: */}
-            {/* Veg/Non-Veg filter */}
-            <label style={{ display: 'inline-block', marginRight: '10px' }}>
-            <input type="checkbox" /> Veg Only
-            </label>
 
             {/* Cuisine filter */}
             <select style={{ padding: '5px', borderRadius: '5px', border: '1px solid #ccc',marginRight: '10px' }}>

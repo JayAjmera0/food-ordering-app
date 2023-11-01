@@ -6,6 +6,7 @@ import axios from 'axios';
 
 const UserProfile = () => {
   const [user, setUser] = useState(null);
+<<<<<<< HEAD
   const userId = 2; // Replace with the actual user ID
 
   useEffect(() => {
@@ -13,6 +14,15 @@ const UserProfile = () => {
     axios.get(`http://127.0.0.1:8000/api/users/${userId}/`)  // Use user ID to fetch specific user data
       .then(response => {
         setUser(response.data);
+=======
+  const userId = 0; // Replace with the actual user ID
+
+  useEffect(() => {
+    // Make an HTTP GET request to fetch user data by user ID
+    axios.get('http://127.0.0.1:8000/api/users/')
+      .then(response => {
+        setUser(response.data[userId]);
+>>>>>>> dbcd11efd3c2c01f6bc967df7ea07adee374eb47
       })
       .catch(error => {
         console.error('Error fetching user data:', error);

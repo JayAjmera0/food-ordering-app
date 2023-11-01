@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
 import './Addresses.css';
+<<<<<<< HEAD
 import axios from 'axios';
+=======
+>>>>>>> dbcd11efd3c2c01f6bc967df7ea07adee374eb47
 
 const Addresses = () => {
   const [userAddresses, setUserAddresses] = useState([]);
