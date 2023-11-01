@@ -27,7 +27,7 @@ const creatorsData = [
       id: 4,
       name: 'Ninad Khasale',
       description: "Meet Ninad Khasale, a dedicated and enthusiastic individual. With a thirst for knowledge and a commitment to excellence, Ninad is poised to make a lasting impact in his chosen field. Join us in following Ninad's journey as he pursues his aspirations and contributes to meaningful progress.",
-      image: 'path_to_image_creator_4.jpg',
+      image: 'ninad_img.jpeg',
     },
   ];
 
