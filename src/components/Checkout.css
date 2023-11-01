@@ -9,25 +9,17 @@
   margin-top: 0; /* Set margin-top to 0 to align to the top */
 }
 
-.checkout {
-  text-align: center;
-  background-color: #f7f7f7;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Checkout form container */
 .checkout .checkout-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* Add margin-top to create space */
 }
 
-/* Rest of your CSS remains the same */
 .checkout form {
   flex: 1;
   text-align: left;
@@ -62,6 +54,7 @@
 .checkout button:hover {
   background-color: #357ca5;
 }
+
 
 .checkout .order-summary {
   flex: 1;
@@ -107,3 +100,4 @@
 .checkout .link-to-cart a:hover {
   color: #357ca5;
 }
+

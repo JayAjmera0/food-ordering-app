@@ -34,7 +34,7 @@ const Checkout = () => {
       <div className="checkout-form">
         <form onSubmit={handleSubmit}>
           <label>
-            Address:
+            Address :
             <input
               type="text"
               name="address"

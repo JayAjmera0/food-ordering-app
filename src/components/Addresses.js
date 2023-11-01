@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
+import './Addresses.css';
 
 const Addresses = () => {
   const [userAddresses, setUserAddresses] = useState([]);

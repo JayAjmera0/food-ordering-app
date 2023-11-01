@@ -1,7 +1,9 @@
 .user-profile {
+
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   background-color: #f0f0f0;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh; /* Use viewport height for vertical centering */
 }
 
 .user-details {
@@ -10,10 +12,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 400px;
   text-align: center;
+  padding: 10px; /* Add padding for spacing inside the container */
 }
 
 h1 {
-  padding: 10px;
   font-size: 24px;
   margin-bottom: 10px;
 }
