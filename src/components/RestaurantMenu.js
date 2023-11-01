@@ -9,9 +9,6 @@ const RestaurantMenu = () => {
   const { id } = useParams();
   const [restaurant, setRestaurant] = useState(null);
   const { cart, dispatch } = useCart();
-
-<<<<<<< HEAD
-=======
   const restaurantData = [
     { id: 1, name: 'Bella Italia', rating: 4.5, menu: [
       { category: 'Appetizers', items: [
@@ -217,7 +214,7 @@ const RestaurantMenu = () => {
         },
       ],
     }    ]
->>>>>>> dbcd11efd3c2c01f6bc967df7ea07adee374eb47
+
   useEffect(() => {
     // Make an HTTP GET request to fetch restaurant menu data
     axios.get(`http://127.0.0.1:8000/api/menus/`)

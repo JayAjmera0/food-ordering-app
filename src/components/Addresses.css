@@ -2,16 +2,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
+
   height: 100vh; /* Adjust as needed for vertical centering */
-=======
   height: 100vh;
   background-color: #fff; /* Adjust as needed for vertical centering */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
   
   
->>>>>>> dbcd11efd3c2c01f6bc967df7ea07adee374eb47
+
 }
 
 h1 {
@@ -19,10 +18,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> dbcd11efd3c2c01f6bc967df7ea07adee374eb47
+
+
+
 li {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
