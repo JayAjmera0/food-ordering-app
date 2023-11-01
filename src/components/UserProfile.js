@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Navbar from './Navbar.js';
+import './UserProfile.css';
 
 const UserProfile = () => {
   const [user, setUser] = useState(null);

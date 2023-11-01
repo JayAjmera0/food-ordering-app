@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useCart } from './CartContext';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import './Checkout.css'; // Import the CSS file
+
 
 const Checkout = () => {
   const { cart } = useCart();
@@ -57,11 +59,11 @@ const Checkout = () => {
           <ul>
             {cart.map((item) => (
               <li key={item.id}>
-                {item.name} - Quantity: {item.quantity} - Price: ${(item.price * item.quantity).toFixed(2)}
+                {item.name} - Quantity: {item.quantity} - Price: Rs{(item.price * item.quantity).toFixed(2)}
               </li>
             ))}
           </ul>
-          <h3>Total: ${cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</h3>
+          <h3>Total: Rs{cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</h3>
         </div>
       </div>
       <Link to="/cart">

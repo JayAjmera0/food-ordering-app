@@ -30,7 +30,9 @@ const Home = () => {
       rating: 4.2,
       imageUrl: '/indian.jpg', // Add the image URL for Mexican restaurant
     },
-    // Add more restaurant entries as needed
+    {id:4, name:'Sushi Haven', rating:4.2, imageUrl:'sushi.jpg', cuisine:'Japanese'},
+    {id:5, name:'Burger Junction', rating:3.8, imageUrl:'burger.jpg', cuisine:'American'},
+    {id:6, name:'Chai Chai Cafe', rating:4.0, imageUrl:'chai.png', cuisine:'Indian'},
   ];
   useEffect(() => {
     // Set restaurants when component mounts
