@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
 import axios from 'axios'; // Import Axios
-
+// get the user id from the local storage
+const userId = 2;
 const PastOrders = () => {
   const [pastOrders, setPastOrders] = useState([]);
 
@@ -9,7 +10,7 @@ const PastOrders = () => {
     // Make an HTTP GET request to fetch past orders data
     axios.get('http://127.0.0.1:8000/api/orders/') // Replace with your Django API URL
       .then(response => {
-        setPastOrders(response.data);
+        setPastOrders([response.data[userId]]);
       })
       .catch(error => {
         console.error('Error fetching past orders data:', error);
